@@ -92,6 +92,8 @@
   --sombra-lcd: 0 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 0 rgba(255, 255, 255, 0.6);
 
   /* Movimiento */
+  --feed-alto: min(80svh, 56rem);
+  --scroll-ancho: 14px;
   --t-rapida: 120ms;
   --t-media: 220ms;
   --easing: cubic-bezier(0.2, 0.9, 0.3, 1.3);
@@ -203,7 +205,25 @@ body::before {
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
   gap: var(--space-5);
   padding: var(--space-5);
+  max-height: var(--feed-alto);
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  scrollbar-color: var(--azul-700) var(--cielo);
+  border-block: var(--borde-fino) var(--azul-300);
+  box-shadow: 0 6px 8px -6px rgba(24, 32, 74, 0.25) inset, 0 -6px 8px -6px rgba(24, 32, 74, 0.25) inset;
 }
+.feed-grid::-webkit-scrollbar { width: var(--scroll-ancho); }
+.feed-grid::-webkit-scrollbar-track {
+  background: var(--cielo);
+  box-shadow: 1px 0 2px rgba(24, 32, 74, 0.3) inset;
+}
+.feed-grid::-webkit-scrollbar-thumb {
+  background: var(--grad-barra);
+  border: var(--borde-med) var(--cielo);
+  border-radius: var(--r-pill);
+  box-shadow: var(--sombra-btn);
+}
+.feed-grid::-webkit-scrollbar-thumb:hover { background: var(--grad-rosa); }
 
 /* ────────────── 5. COMPONENTES ────────────── */
 
