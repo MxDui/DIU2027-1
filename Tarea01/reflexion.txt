@@ -1,0 +1,51 @@
+1. ¿Qué referencias elegiste y qué te gustó de ellas?
+Elegí las referencias Y2K porque me daba como curiosidad las gradientes que se utilizan entonces principalmente fue eso por lo que seleccioné este estilo . Lo que más me gustó es lo llamativas que son
+2. Menciona tres cosas de tus referencias que intentaste construir utilizando CSS.
+Las gradientes en los componentes
+Las sombras de las cartas
+Los efectos en las imágenes
+3. ¿Qué parte de la página te costó más?
+Lo que más me costó fue el manejar toda la estructura con css vanilla porque es como ir 10 pasos atrás de todo el tooling que tenemos hoy en día.
+4. ¿Qué parte de tu página te gustó más?
+Lo que más me gustó fue el diseño de la tarjeta de los reportes
+5. ¿Qué cambió entre tu boceto y el resultado final?
+Son muy similares pero ciertas funcionalides o detalles que no había contemplado en el boceto necesitaron reajustar las cosas
+6. ¿Utilizaste IA? Si la utilizaste, ¿para qué?
+Lo usé para general la primer iteración siendo muy específico y posteriormente fuí haciendo cambios y ajustes tanto al html como al css . Este fue el prompt que utilicé
+
+<<<
+Can you help me making a HTML and CSS webpage following this spec
+Create a social media  like page about lost objects in the science faculty of UNAM university. 
+The page must include this components :
+○ Encabezado y navegación.
+○ Sección principal.
+○ Buscador o forma de consultar objetos.
+○ Al menos tres objetos.
+○ Imágenes de los objetos.
+○ Estado del objeto.
+○ Información como lugar, fecha y descripción.
+○ Formulario para reportar un objeto.
+○ Botones.
+○ Pie de página.
+Los objetos deberán representar diferentes situaciones, por ejemplo:
+Mochila PERDIDA
+Calculadora ENCONTRADA
+Termo RECUPERADO
+Debe ser fácil distinguir visualmente cada estado.
+
+With the listed constraints : 
+- We should favor the use of css variables instead of hardcoded values
+- With these variables we should be able to generate a color palette and typography system
+- Use margins and paddings so the components we make ahve space to breath 
+- Implement grid and flexbox for organizing the cards, sidebars and rest of components of the app 
+- Handle images with object fit
+- Add nice motion design effects with hover and focus using transition and keyframes
+- Implement @media controllers so we always know we are handling at least phone, tablet and laptop sizes and layouts 
+- For images we should download them and put them under the imagenes folder 
+
+if you need visual reference for the page itself use @boceto.png as a layout inspiration and @referencias.png as an styling inspiration
+>>>
+
+7. ¿Tuviste que modificar o corregir alguna respuesta proporcionada por IA?
+
+Sí, tuve que modificar y corregir varias partes porque en estructura estaba ok pero en detalles sí le hacía falta un poco mucho la verdad.
