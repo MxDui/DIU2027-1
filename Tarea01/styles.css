@@ -5,6 +5,14 @@
    ════════════════════════════════════════════════════════════ */
 
 /* ────────────── 1. VARIABLES ────────────── */
+@font-face {
+  font-family: "Rocket Pop";
+  src: url("fuentes/rocketpop.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Paleta: azules cobalto / cielo Y2K */
   --azul-900: #0b1e6b;
@@ -49,7 +57,10 @@
   --lcd-texto: #8ff0ff;
 
   /* Tipografía */
-  --ff-display: "VT323", "Courier New", monospace;
+  --ff-display: "Rocket Pop", "VT323", "Courier New", monospace;
+  --ff-lcd: "VT323", "Courier New", monospace;
+  --ff-tarjeta: var(--ff-lcd);
+  --ws-hero: 0.35em;
   --ff-body: "Space Mono", "IBM Plex Mono", "Courier New", monospace;
   --fs-xs: clamp(0.68rem, 0.65rem + 0.15vw, 0.78rem);
   --fs-sm: clamp(0.78rem, 0.74rem + 0.2vw, 0.9rem);
@@ -238,6 +249,12 @@ body::before {
   padding: var(--space-2) var(--space-3);
   font-size: var(--fs-sm);
 }
+.window-bar-title {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .window-icon { color: var(--dorado); }
 .window-controls { display: flex; gap: var(--space-1); }
 .w-btn {
@@ -291,6 +308,7 @@ body::before {
 .hero-heading {
   font-family: var(--ff-display);
   font-size: var(--fs-3xl);
+  word-spacing: var(--ws-hero);
   font-weight: var(--fw-normal);
   line-height: var(--lh-tight);
   color: var(--azul-700);
@@ -302,7 +320,6 @@ body::before {
   -webkit-text-fill-color: transparent;
   animation: brillo 8s linear infinite;
 }
-.hero-fc { font-size: 1em; }
 .hero-side {
   text-align: right;
   font-size: var(--fs-sm);
@@ -420,7 +437,7 @@ body::before {
   text-align: center;
   background: var(--amarillo);
 }
-.pixel-box { font-family: var(--ff-display); font-size: var(--fs-lg); color: var(--azul-900); }
+.pixel-box { font-family: var(--ff-lcd); font-size: var(--fs-lg); color: var(--azul-900); }
 
 /* ·· Botones (estilo bisel cromado) ·· */
 .btn {
@@ -496,7 +513,7 @@ body::before {
   background: var(--grad-lcd);
   box-shadow: var(--sombra-lcd);
   color: var(--lcd-texto);
-  font-family: var(--ff-display);
+  font-family: var(--ff-lcd);
   font-size: var(--fs-lg);
   font-weight: var(--fw-normal);
   line-height: 1.2;
@@ -606,7 +623,7 @@ input:user-invalid, select:user-invalid, textarea:user-invalid {
   justify-content: space-between;
   align-items: center;
   gap: var(--space-3);
-  font-family: var(--ff-display);
+  font-family: var(--ff-tarjeta);
   font-size: var(--fs-md);
   color: var(--blanco);
   padding: var(--space-1) var(--space-3);
@@ -631,7 +648,7 @@ input:user-invalid, select:user-invalid, textarea:user-invalid {
   width: 2.6em;
   height: 2.6em;
   border-radius: 50%;
-  font-family: var(--ff-display);
+  font-family: var(--ff-tarjeta);
   font-size: var(--fs-md);
   color: var(--blanco);
   background: var(--grad-rosa);
@@ -670,7 +687,7 @@ input:user-invalid, select:user-invalid, textarea:user-invalid {
   top: var(--space-4);
   right: var(--space-3);
   z-index: var(--z-stamp);
-  font-family: var(--ff-display);
+  font-family: var(--ff-tarjeta);
   font-size: var(--fs-lg);
   color: var(--estado-recuperado);
   background: rgba(255, 255, 255, 0.9);
@@ -681,7 +698,7 @@ input:user-invalid, select:user-invalid, textarea:user-invalid {
   box-shadow: var(--sombra-stamp);
 }
 
-.post-titulo { font-family: var(--ff-display); font-size: var(--fs-lg); font-weight: var(--fw-normal); color: var(--azul-900); line-height: var(--lh-tight); }
+.post-titulo { font-family: var(--ff-tarjeta); font-size: var(--fs-lg); font-weight: var(--fw-normal); color: var(--azul-900); line-height: var(--lh-tight); }
 .post-info { display: grid; gap: var(--space-1); font-size: var(--fs-sm); }
 .post-info strong { color: var(--azul-700); }
 
@@ -771,7 +788,7 @@ input:user-invalid, select:user-invalid, textarea:user-invalid {
   padding: var(--space-3) var(--space-5);
   color: var(--tinta-suave);
 }
-.contador { font-family: var(--ff-display); letter-spacing: 0.2em; color: var(--azul-900); }
+.contador { font-family: var(--ff-lcd); letter-spacing: 0.2em; color: var(--azul-900); }
 .status-bar {
   display: flex;
   justify-content: space-between;
