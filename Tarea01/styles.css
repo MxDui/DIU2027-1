@@ -320,13 +320,6 @@ body::before {
   -webkit-text-fill-color: transparent;
   animation: brillo 8s linear infinite;
 }
-.hero-side {
-  text-align: right;
-  font-size: var(--fs-sm);
-  color: var(--tinta-suave);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
 
 /* ·· Pestañas ·· */
 .tab-nav { background: var(--cielo-suave); }
